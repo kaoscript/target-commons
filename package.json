@@ -1,0 +1,42 @@
+{
+	"name": "@kaoscript/target-commons",
+	"description": "commons targets for kaoscript compiler",
+	"version": "0.1.0",
+	"author": {
+		"name": "Baptiste Augrain",
+		"email": "daiyam@zokugun.org"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kaoscript/target-commons"
+	},
+	"bugs": {
+		"url": "https://github.com/kaoscript/target-commons/issues"
+	},
+	"license": "MIT",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/mit-license.php"
+		}
+	],
+	"engines": {
+		"node": ">= 4.0.0"
+	},
+	"files": [
+		"build",
+		"src"
+	],
+	"main": "build/index.js",
+	"dependencies": {
+	},
+	"devDependencies": {
+		"kaoscript": ">=0.7 <1"
+	},
+	"scripts": {
+		"compile": "kaoscript -c -t ecma-v5 -o build src/index.ks"
+	},
+	"kaoscript": {
+		"main": "src/index.ks"
+	}
+}
