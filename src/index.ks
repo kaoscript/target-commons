@@ -10,11 +10,25 @@
 require Compiler
 
 Compiler.registerTargets({
-	'safari-v8': 'ecma-v5'
-	'safari-v9': 'ecma-v5'
-	'safari-v10': 'ecma-v6'
 	'trident-v5': 'ecma-v5'
 	'trident-v6': 'ecma-v5'
 	'trident-v7': 'ecma-v5'
-	'trident-v8': 'ecma-v5'
+	'trident-v8': 'ecma-v5',
+	chakra(version, targets) => targets.ecma['6']
+	jsc(version, targets) { // {{{
+		if version[0] < 10 {
+			return targets.ecma['5']
+		}
+		else {
+			return targets.ecma['6']
+		}
+	}, // }}}
+	monkey(version, targets) { // {{{
+		if version[0] < 41 {
+			return targets.ecma['5']
+		}
+		else {
+			return targets.ecma['6']
+		}
+	} // }}}
 })
