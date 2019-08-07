@@ -7,7 +7,7 @@ module.exports = function(Compiler) {
 		"trident-v8": "ecma-v5",
 		chakra: function(version, targets) {
 			if(arguments.length < 2) {
-				throw new SyntaxError("wrong number of arguments (" + arguments.length + " for 2)");
+				throw new SyntaxError("Wrong number of arguments (" + arguments.length + " for 2)");
 			}
 			if(version === void 0 || version === null) {
 				throw new TypeError("'version' is not nullable");
@@ -19,7 +19,7 @@ module.exports = function(Compiler) {
 		},
 		jsc: function(version, targets) {
 			if(arguments.length < 2) {
-				throw new SyntaxError("wrong number of arguments (" + arguments.length + " for 2)");
+				throw new SyntaxError("Wrong number of arguments (" + arguments.length + " for 2)");
 			}
 			if(version === void 0 || version === null) {
 				throw new TypeError("'version' is not nullable");
@@ -36,7 +36,7 @@ module.exports = function(Compiler) {
 		},
 		monkey: function(version, targets) {
 			if(arguments.length < 2) {
-				throw new SyntaxError("wrong number of arguments (" + arguments.length + " for 2)");
+				throw new SyntaxError("Wrong number of arguments (" + arguments.length + " for 2)");
 			}
 			if(version === void 0 || version === null) {
 				throw new TypeError("'version' is not nullable");
